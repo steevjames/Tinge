@@ -15,7 +15,6 @@ var totalDisplay = document.querySelector("#total")
 init();
 
 function init() {
-	setUpModeButtons();
 	setUpSquareBox();
 	resetPage();
 }
