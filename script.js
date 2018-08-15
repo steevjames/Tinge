@@ -35,6 +35,7 @@ function setUpSquareBox() {
 				resultDisplay.textContent = "Correct!"
 				reset.textContent = "Play Again?";
 				changeColors(pickedColor);
+				
 			}
 			scoreDisplay.textContent = score;
 			totalDisplay.textContent = total;
@@ -48,10 +49,7 @@ function setUpModeButtons() {
 			modeButtons[0].classList.remove("selected");
 			modeButtons[1].classList.remove("selected");
 			this.classList.add("selected");
-			if (this.textContent == "Easy")
-				numSquares = 3;
-			else
-				numSquares = 6;
+			numSquares = 6;
 			resetPage();
 
 		});
