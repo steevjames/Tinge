@@ -29,8 +29,8 @@ function setUpSquareBox() {
 			}
 			else {
 				score++;
-				alert("correct");
-				resultDisplay.textContent = "Correct!"
+				alert("Correct");
+				resultDisplay.textContent = "Correct !"
 				reset.textContent = "Play Again?";
 				changeColors(pickedColor);
 				resetPage();
@@ -57,7 +57,7 @@ function resetPage() {
 	}
 	//header.style.backgroundColor = "steelblue";
 	resultDisplay.textContent = "";
-	reset.textContent = "Shuffle Colors";
+	reset.textContent = "SHUFFLE";
 }
 
 
