@@ -57,7 +57,7 @@ function resetPage() {
 	}
 	//header.style.backgroundColor = "steelblue";
 	resultDisplay.textContent = "";
-	reset.textContent = "New Colors";
+	reset.textContent = "Shuffle Colors";
 }
 
 
