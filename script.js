@@ -6,7 +6,6 @@ var colorDisplay = document.querySelector("#curColor");
 var resultDisplay = document.querySelector("#result");
 var header = document.querySelector("#header");
 var reset = document.querySelector("#reset");
-var modeButtons = document.querySelectorAll(".mode");
 var score = 0;
 var total = 0;
 var scoreDisplay = document.querySelector("#won");
@@ -42,18 +41,6 @@ function setUpSquareBox() {
 	}
 }
 
-function setUpModeButtons() {
-	for (var i = 0; i < modeButtons.length; i++) {
-		modeButtons[i].addEventListener("click", function () {
-			modeButtons[0].classList.remove("selected");
-			modeButtons[1].classList.remove("selected");
-			this.classList.add("selected");
-			numSquares = 6;
-			resetPage();
-
-		});
-	}
-}
 
 function resetPage() {
 	colors = generateRandomColors(numSquares);
