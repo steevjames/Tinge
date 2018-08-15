@@ -9,7 +9,7 @@ var reset = document.querySelector("#reset");
 var score = 0;
 var total = 0;
 var scoreDisplay = document.querySelector("#won");
-var totalDisplay = document.querySelector("#total")
+var totalDisplay = document.querySelector("#total");
 
 init();
 
@@ -33,6 +33,7 @@ function setUpSquareBox() {
 				resultDisplay.textContent = "Correct!"
 				reset.textContent = "Play Again?";
 				changeColors(pickedColor);
+				resetPage();
 				
 			}
 			scoreDisplay.textContent = score;
