@@ -1,5 +1,5 @@
 var colors = [];
-var numSquares = 6;
+var numSquares = 9;
 var sqrList = document.querySelectorAll(".square");
 var pickedColor;
 var colorDisplay = document.querySelector("#curColor");
@@ -24,7 +24,8 @@ function setUpSquareBox() {
 			total++;
 			if (this.style.backgroundColor != pickedColor) {
 				alert("Wrong choice!");
-				this.style.backgroundColor = "black";
+				this.style.backgroundColor = "transparent";
+				this.style.visibility = "hidden";
 				resultDisplay.textContent = "Try Again!"
 			}
 			else {
@@ -50,6 +51,7 @@ function resetPage() {
 	for (var i = 0; i < sqrList.length; i++) {
 		if (colors[i]) {
 			sqrList[i].style.display = "block";
+			sqrList[i].style.visibility = "visible";
 			sqrList[i].style.backgroundColor = colors[i];
 		}
 		else
@@ -68,10 +70,8 @@ reset.addEventListener("click", function () {
 
 
 function changeColors(color) {
-	for (var i = 0; i < sqrList.length; i++) {
-		sqrList[i].style.backgroundColor = color;
-	}
 	header.style.backgroundColor = color;
+	document.body.style.backgroundColor=color;
 }
 
 function pickColor() {
