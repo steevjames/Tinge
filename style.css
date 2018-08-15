@@ -70,3 +70,7 @@ button:hover{
 #score{
 	text-align: center;
 }
+#topbar{
+	background-color:rgba(0,0,0,.1);
+	padding:5px;
+}

@@ -55,7 +55,7 @@ function resetPage() {
 		else
 			sqrList[i].style.display = "none";
 	}
-	header.style.backgroundColor = "steelblue";
+	//header.style.backgroundColor = "steelblue";
 	resultDisplay.textContent = "";
 	reset.textContent = "New Colors";
 }
