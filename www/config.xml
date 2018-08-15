@@ -1,0 +1,28 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<widget xmlns = "http://www.w3.org/ns/widgets" 
+   xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.steevjames.color" version = "1.0.0">
+   
+   <name>Color Game</name>
+   
+   <description>
+      Play with Colors !
+   </description>
+   
+   <author href = "http://steevjames.blogspot.com" email = "steevjames@gmail.com">
+      Steev James
+   </author>
+   
+   <preference name="android-minSdkVersion" value="19" />
+   <preference name="android-targetSdkVersion" value="26" />
+
+   
+	<plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+	<allow-intent href="*" />
+
+   
+   <icon src = "img/logo.png" />
+	  
+	<splash src="img/splash.jpg"  />
+	  
+</widget>
