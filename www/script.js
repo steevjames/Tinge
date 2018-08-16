@@ -58,7 +58,7 @@ function resetPage() {
 			sqrList[i].style.display = "none";
 	}
 	//header.style.backgroundColor = "steelblue";
-	resultDisplay.textContent = "";
+	//resultDisplay.textContent = "hi";
 	reset.textContent = "SHUFFLE";
 }
 

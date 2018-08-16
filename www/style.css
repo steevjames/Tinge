@@ -31,6 +31,7 @@ body{
 	text-align: center;
 	font-size:3.5vh;
 	padding:5px;
+	font-family:verdana;
 }
 
 #container{
@@ -61,35 +62,40 @@ body{
 	background-color: white;
 	text-align: center;
 	color: black;
+	overflow:hidden;
+	padding-left: 5vw;
+	padding-right: 5vw;
 }
 
-#reset{
-	padding-bottom:10px;
-	padding-top:10px;
-	padding-left:20px;
-	padding-right:20px;
-}
 
 #curColor{
 
 }
 
 button{
+	padding-bottom:10px;
+	padding-top:10px;
+	padding-left:20px;
+	padding-right:20px;
 	border: none;
 	background-color: none;
-	height: 100%;
 	font-weight: 700;
 	color: steelblue;
 	letter-spacing: 1px;
-	font-size: inherit;
+	font-size: 2vh;
 	transition: all 0.5s;
 	outline: none;
 }
 
-#result{
-	display: inline-block;
-	width:20%;
+#reset{
+	float:left;
 }
+
+#result{
+	float:right;
+}
+
+
 
 button:hover{
 	color: white;
@@ -113,7 +119,6 @@ button:hover{
 #scorewon{
 	background-color:rgba(0,0,0,.2);
 	color:white;
-	height:4vh;
 	font-size:2.5vh;
 	padding:5px;
 }
@@ -121,7 +126,6 @@ button:hover{
 #scoretotal{
 	background-color:rgba(0,0,0,.2);
 	color:white;
-	height:4vh;
 	font-size:2.5vh;
 	padding:5px;
 }
