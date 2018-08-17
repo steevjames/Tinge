@@ -27,7 +27,7 @@ function setUpSquareBox() {
 			resultDisplay.textContent = resultDisplay.textContent - 1;
 			if (this.style.backgroundColor != pickedColor) {
 				//alert("Wrong choice!");
-				clickwrong.style.display='block';
+				clickwrong.style.display = 'block';
 				this.style.backgroundColor = "transparent";
 				this.style.visibility = "hidden";
 				//resultDisplay.textContent = "Try Again!";
@@ -36,7 +36,7 @@ function setUpSquareBox() {
 				score++;
 				//alert("Correct");
 				//resultDisplay.textContent = "Correct !";
-				clickcorrect.style.display='block';
+				clickcorrect.style.display = 'block';
 				reset.textContent = "Play Again?";
 				changeColors(pickedColor);
 				resetPage();
@@ -100,9 +100,9 @@ function generateRandomColors(num) {
 }
 
 clickcorrect.addEventListener("click", function () {
-	clickcorrect.style.display='none';
+	clickcorrect.style.display = 'none';
 });
 
 clickwrong.addEventListener("click", function () {
-	clickwrong.style.display='none';
+	clickwrong.style.display = 'none';
 });
