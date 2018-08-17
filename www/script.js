@@ -3,7 +3,7 @@ var numSquares = 9;
 var sqrList = document.querySelectorAll(".square");
 var pickedColor;
 var colorDisplay = document.querySelector("#curColor");
-var resultDisplay = document.querySelector("#result");
+var resultDisplay = document.querySelector("#rem");
 var header = document.querySelector("#header");
 var reset = document.querySelector("#reset");
 var score = 0;
@@ -22,23 +22,27 @@ function setUpSquareBox() {
 	for (var i = 0; i < sqrList.length; i++) {
 		sqrList[i].addEventListener("click", function () {
 			total++;
+			resultDisplay.textContent = resultDisplay.textContent - 1;
 			if (this.style.backgroundColor != pickedColor) {
 				alert("Wrong choice!");
 				this.style.backgroundColor = "transparent";
 				this.style.visibility = "hidden";
-				resultDisplay.textContent = "Try Again!"
+				//resultDisplay.textContent = "Try Again!";
 			}
 			else {
 				score++;
 				alert("Correct");
-				resultDisplay.textContent = "Correct !"
+				//resultDisplay.textContent = "Correct !"
 				reset.textContent = "Play Again?";
 				changeColors(pickedColor);
 				resetPage();
-				
+
 			}
 			scoreDisplay.textContent = score;
 			totalDisplay.textContent = total;
+			if (resultDisplay.textContent <= 0) {
+				window.setTimeout("alert('Over')", 700);
+			}
 		});
 	}
 }
@@ -71,7 +75,7 @@ reset.addEventListener("click", function () {
 
 function changeColors(color) {
 	header.style.backgroundColor = color;
-	document.body.style.backgroundColor=color;
+	document.body.style.backgroundColor = color;
 }
 
 function pickColor() {
