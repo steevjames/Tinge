@@ -41,7 +41,7 @@ body{
 	background-color:white;
 	color:#0f3777;
 	text-align: center;
-	font-size:3.5vh;
+	font-size:4vh;
 	padding:5px;
 	font-family:verdana;
 	position: :sticky;
@@ -54,7 +54,7 @@ body{
 	margin: 0px;
 	font-weight: normal;
 	line-height: 1.1;
-	animation:colorchange 25s infinite;
+	animation:colorchange 15s infinite;
 }
 
 

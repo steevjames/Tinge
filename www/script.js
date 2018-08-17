@@ -10,6 +10,8 @@ var score = 0;
 var total = 0;
 var scoreDisplay = document.querySelector("#won");
 var totalDisplay = document.querySelector("#total");
+var clickcorrect = document.querySelector("#clickcorrect");
+var clickwrong = document.querySelector("#clickwrong");
 
 init();
 
@@ -24,15 +26,17 @@ function setUpSquareBox() {
 			total++;
 			resultDisplay.textContent = resultDisplay.textContent - 1;
 			if (this.style.backgroundColor != pickedColor) {
-				alert("Wrong choice!");
+				//alert("Wrong choice!");
+				clickwrong.style.display='block';
 				this.style.backgroundColor = "transparent";
 				this.style.visibility = "hidden";
 				//resultDisplay.textContent = "Try Again!";
 			}
 			else {
 				score++;
-				alert("Correct");
-				//resultDisplay.textContent = "Correct !"
+				//alert("Correct");
+				//resultDisplay.textContent = "Correct !";
+				clickcorrect.style.display='block';
 				reset.textContent = "Play Again?";
 				changeColors(pickedColor);
 				resetPage();
@@ -94,3 +98,11 @@ function generateRandomColors(num) {
 	}
 	return arr;
 }
+
+clickcorrect.addEventListener("click", function () {
+	clickcorrect.style.display='none';
+});
+
+clickwrong.addEventListener("click", function () {
+	clickwrong.style.display='none';
+});
