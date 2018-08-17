@@ -1,26 +1,25 @@
 body{
 	background-color: steelblue;
-	text-transform: uppercase;
-	color: white;
+	color: steelblue;
 	padding: 5px;
 	margin:0px;
 	font-family: "Montserrat","Avenir";
+	animation:colorchange 15s infinite;
 }
 
 *{
-	transition: all .5s;
 	box-sizing: border-box;
 }
 
 #overlay{
-	background-color: rgba(0,0,0,.8);
+	background-color: white;
 	color: white;
 	position:absolute;
-	left:5px;
-	right:5px;
-	top:5px;
-	bottom:5px;
-	border-radius:10px;
+	left:7px;
+	right:7px;
+	top:7px;
+	bottom:7px;
+	border-radius:7px;
 	overflow:auto;
 	padding-bottom:calc(5px + 8vh);
 }
@@ -29,106 +28,10 @@ body{
 	background-color:white;
 	color:#0f3777;
 	text-align: center;
-	font-size:4vh;
+	font-size:7vh;
 	padding:5px;
 	font-family:verdana;
-}
-
-#container{
-	max-width: 600px;
-	margin: 20px auto;
-}
-
-.square{
-	width: 30%;
-	padding-top: 30%;
-	float: left;
-	background-color: pink;
-	margin: 1.66%;
-	transition: background 0.6s;
-}
-
-#header{
-	text-align: center;
-	background-color: steelblue;
-	margin: 0px;
-	font-weight: normal;
-	line-height: 1.1;
-	font-size:6vh;
-}
-
-
-#menu{
-	background-color: white;
-	text-align: center;
-	color: black;
-	overflow:hidden;
-	padding-left: 5vw;
-	padding-right: 5vw;
-}
-
-
-#curColor{
-
-}
-
-button{
-	padding-bottom:10px;
-	padding-top:10px;
-	padding-left:20px;
-	padding-right:20px;
-	border: none;
-	background-color: none;
-	font-weight: 700;
-	color: steelblue;
-	letter-spacing: 1px;
-	font-size: 2vh;
-	transition: all 0.5s;
-	outline: none;
-}
-
-#reset{
-	float:left;
-}
-
-#result{
-	float:right;
-}
-
-
-
-button:hover{
-	color: white;
-	background-color: steelblue;
-}
-
-#score{
-	text-align: center;
-	font-size:20px;
-	position:fixed;
-	bottom:5px;
-	left:5px;
-	right:5px;
-}
-#topbar{
-	background-color:rgba(0,0,0,.3);
-	padding-top:2vh;
-	padding-bottom:2vh;
-	font-family: testfont;
-}
-
-#scorewon{
-	background-color:rgba(0,0,0,.2);
-	color:white;
-	font-size:2.5vh;
-	padding:5px;
-}
-
-#scoretotal{
-	background-color:rgba(0,0,0,.2);
-	color:white;
-	font-size:2.5vh;
-	padding:5px;
+	position: :sticky;
 }
 
 @keyframes hue{
@@ -150,26 +53,35 @@ button:hover{
     font-family: testfont;
     src: url(teen.ttf);
 }
-#clickcorrect
-{
-	display:none;
+
+#bar{
+	background-color:steelblue;
+	padding-bottom:3vh;
 }
-#clickwrong
-{
-	display:none;
+#gap{
+	background-color:transparent;
+	padding-bottom:7vh;
 }
-.clickbox{
-	position:fixed;
-	background-color:rgba(0,0,0,.7);
-	color:white;
-	top: 50%;
-	left:50%;
-	transform: translate(-50%,-50%); 
-	padding-top:50vh;
-	padding-bottom:50vh;
-	padding-left:50vw;
-	padding-right:50vw;
-	font-size:10vw;
-	white-space: nowrap;
+.button{
+	text-align:center;
+	color:black;
+	font-size:5vh;
+	margin-top:3vh;
+	padding-top:1vh;
+	padding-bottom:1vh;
+	padding-left:2vw;
+	padding-right:2vw;
+	color:#44d;
 	font-family: testfont;
+}
+a{
+	text-decoration: none;
+}
+hr {
+	margin-left: 10vw;
+	margin-right: 10vw;
+	height: 6px;
+	background: url(hr.png) repeat-x 0 0;
+    border: 0;
+	animation:hue 10s infinite;
 }
