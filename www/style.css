@@ -129,3 +129,18 @@ button:hover{
 	font-size:2.5vh;
 	padding:5px;
 }
+
+@keyframes hue{
+	0% { filter:hue-rotate(0deg); }
+	50% { filter:hue-rotate(360deg); }
+	100% { filter:hue-rotate(0deg); }
+	}
+
+.rainbow {
+	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #929), color-stop(0.3, #22f), color-stop(0.45, #299), color-stop(0.6, #2b2),color-stop(0.75, #2b2), color-stop(0.9, #bb2), color-stop(1, #b22) );
+	background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #929), color-stop(0.3, #22f), color-stop(0.45, #299), color-stop(0.6, #2b2),color-stop(0.75, #2b2), color-stop(0.9, #bb2), color-stop(1, #b22) );
+	color:transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	animation:hue 5s infinite;
+  }
