@@ -1,38 +1,25 @@
 body{
 	background-color: steelblue;
-	color: white;
+	color: steelblue;
 	padding: 5px;
 	margin:0px;
 	font-family: "Montserrat","Avenir";
 	animation:colorchange 15s infinite;
 }
 
-@keyframes colorchange{
-0% { background-color: #aaf }
-33% { background-color: #faa }
-66% { background-color: #afa }
-100% { background-color: #aaf }
-}
-
-@keyframes hue{
-	0% { filter:hue-rotate(0deg); }
-	50% { filter:hue-rotate(360deg); }
-	100% { filter:hue-rotate(0deg); }
-	}
-
 *{
 	box-sizing: border-box;
 }
 
 #overlay{
-	background-color: rgba(255,255,255,.7);
+	background-color: white;
 	color: white;
 	position:absolute;
-	left:5px;
-	right:5px;
-	top:5px;
-	bottom:5px;
-	border-radius:10px;
+	left:7px;
+	right:7px;
+	top:7px;
+	bottom:7px;
+	border-radius:7px;
 	overflow:auto;
 	padding-bottom:calc(5px + 8vh);
 }
@@ -41,61 +28,17 @@ body{
 	background-color:white;
 	color:#0f3777;
 	text-align: center;
-	font-size:4vh;
+	font-size:7vh;
 	padding:5px;
 	font-family:verdana;
 	position: :sticky;
 }
 
-
-#header{
-	text-align: center;
-	background-color: steelblue;
-	margin: 0px;
-	font-weight: normal;
-	line-height: 1.1;
-	animation:colorchange 15s infinite;
-}
-
-
-
-
-#topbar{
-	background-color:rgba(0,0,0,.3);
-	padding-top:1vh;
-	padding-bottom:1vh;
-}
-
-#content{
-	padding-left:1vw;
-	padding-right:1vw;
-	padding-top:3vh;
-	padding-bottom:3vh;
-	text-align: left;
-	line-height: 2;
-	font-family:testfont;
-	font-size:17px;
-	color:black;
-}
-h1{
-	text-align:center;
-	line-height: 1;
-	font-size: 25px;
-}
-
-hr {
-	margin-left:5vw;
-	margin-right:5vw;
-    border: 0;
-    height: 0;
-    box-shadow: 0 0 5px 1px black;
-}
-
-
-.block{
-	display:inline-block;
-	padding:15px;
-}
+@keyframes hue{
+	0% { filter:hue-rotate(0deg); }
+	50% { filter:hue-rotate(360deg); }
+	100% { filter:hue-rotate(0deg); }
+	}
 
 .rainbow {
 	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #929), color-stop(0.3, #22f), color-stop(0.45, #299), color-stop(0.6, #2b2),color-stop(0.75, #2b2), color-stop(0.9, #bb2), color-stop(1, #b22) );
@@ -109,4 +52,36 @@ hr {
   @font-face {
     font-family: testfont;
     src: url(teen.ttf);
+}
+
+#bar{
+	background-color:steelblue;
+	padding-bottom:3vh;
+}
+#gap{
+	background-color:transparent;
+	padding-bottom:7vh;
+}
+.button{
+	text-align:center;
+	color:black;
+	font-size:5vh;
+	margin-top:3vh;
+	padding-top:1vh;
+	padding-bottom:1vh;
+	padding-left:2vw;
+	padding-right:2vw;
+	color:#44d;
+	font-family: testfont;
+}
+a{
+	text-decoration: none;
+}
+hr {
+	margin-left: 10vw;
+	margin-right: 10vw;
+	height: 6px;
+	background: url(hr.png) repeat-x 0 0;
+    border: 0;
+	animation:hue 10s infinite;
 }
