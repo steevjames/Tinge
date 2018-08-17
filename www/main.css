@@ -25,7 +25,7 @@ body{
 }
 
 #overlay{
-	background-color: rgba(0,0,0,.7);
+	background-color: rgba(255,255,255,.7);
 	color: white;
 	position:absolute;
 	left:5px;
@@ -73,7 +73,9 @@ body{
 	padding-bottom:3vh;
 	text-align: left;
 	line-height: 2;
-	font-family:verdana;
+	font-family:testfont;
+	font-size:17px;
+	color:black;
 }
 h1{
 	text-align:center;
@@ -86,7 +88,7 @@ hr {
 	margin-right:5vw;
     border: 0;
     height: 0;
-    box-shadow: 0 0 5px 1px white;
+    box-shadow: 0 0 5px 1px black;
 }
 
 
@@ -103,3 +105,8 @@ hr {
 	background-clip: text;
 	animation:hue 5s infinite;
   }
+
+  @font-face {
+    font-family: testfont;
+    src: url(teen.ttf);
+}
