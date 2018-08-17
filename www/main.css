@@ -1,0 +1,69 @@
+body{
+	background-color: steelblue;
+	color: white;
+	padding: 5px;
+	margin:0px;
+	font-family: "Montserrat","Avenir";
+}
+
+*{
+	box-sizing: border-box;
+}
+
+#overlay{
+	background-color: rgba(0,0,0,.8);
+	color: white;
+	position:absolute;
+	left:5px;
+	right:5px;
+	top:5px;
+	bottom:5px;
+	border-radius:10px;
+	overflow:auto;
+	padding-bottom:calc(5px + 8vh);
+}
+
+#topmost{
+	background-color:white;
+	color:#0f3777;
+	text-align: center;
+	font-size:3.5vh;
+	padding:5px;
+	font-family:verdana;
+}
+
+
+#header{
+	text-align: center;
+	background-color: steelblue;
+	margin: 0px;
+	font-weight: normal;
+	line-height: 1.1;
+}
+
+
+
+
+#topbar{
+	background-color:rgba(0,0,0,.3);
+	padding-top:2vh;
+	padding-bottom:2vh;
+}
+
+#content{
+	padding-left:3vw;
+	padding-right:3vw;
+	padding-top:3vh;
+	padding-bottom:3vh;
+	text-align: left;
+	line-height: 2;
+}
+h1{
+	text-align:center;
+	line-height: 1;
+	font-size: 25px;
+}
+.block{
+	display:inline-block;
+	padding:15px;
+}
