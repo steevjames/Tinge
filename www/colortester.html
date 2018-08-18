@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>COLORFUL</title>
+	<link rel="stylesheet" type="text/css" href="css/colortester.css">
+</head>
+
+<body>
+	<div id="overlay">
+		<div id="topmost">
+			<span class="rainbow">COLORFUL</span>
+		</div>
+		<div id="header"> </div>
+
+		<div id="content">
+			<div>Enter Color :</div>
+			<input placeholder="red">
+			<br>
+			<input placeholder="red">
+			<br>
+			<input placeholder="red">
+			<br>
+			<button onclick="">APPLY</button>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		history.pushState(null, null, location.href);
+		window.onpopstate = function () {
+			window.location.replace('index.html');
+		};
+	</script>
+
+</body>
+
+</html>

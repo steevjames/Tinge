@@ -1,10 +1,9 @@
 body{
 	background-color: steelblue;
-	color: steelblue;
+	color: white;
 	padding: 5px;
 	margin:0px;
 	font-family: "Montserrat","Avenir";
-	animation:colorchange 15s infinite;
 }
 
 *{
@@ -12,8 +11,15 @@ body{
 	user-select: none;
 }
 
+@keyframes hue{
+	0% { filter:hue-rotate(0deg); }
+	50% { filter:hue-rotate(360deg); }
+	100% { filter:hue-rotate(0deg); }
+	}
+
+
 #overlay{
-	background-color: white;
+	background-color: rgba(255,255,255,0);
 	color: white;
 	position:absolute;
 	left:15px;
@@ -28,16 +34,38 @@ body{
 	background-color:white;
 	color:#0f3777;
 	text-align: center;
-	font-size:7vh;
+	font-size:4vh;
 	padding:5px;
 	font-family:verdana;
+	position:sticky;
+	left:0;
+	right:0;
+	top:0;
 }
 
-@keyframes hue{
-	0% { filter:hue-rotate(0deg); }
-	50% { filter:hue-rotate(360deg); }
-	100% { filter:hue-rotate(0deg); }
-	}
+#content{
+	padding-left:1vw;
+	padding-right:1vw;
+	padding-top:3vh;
+	padding-bottom:3vh;
+	text-align: center;
+	line-height: 2;
+	font-family:testfont;
+	font-size:17px;
+	color:white;
+}
+
+
+
+#header{
+	text-align: center;
+	background-color: steelblue;
+	margin: 0px;
+	animation:colorchange 20s infinite;
+	font-family: testfont;
+	padding:10px;
+}
+
 
 .rainbow {
 	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #929), color-stop(0.3, #22f), color-stop(0.45, #299), color-stop(0.6, #2b2),color-stop(0.75, #2b2), color-stop(0.9, #bb2), color-stop(1, #b22) );
@@ -48,53 +76,7 @@ body{
 	animation:hue 5s infinite;
   }
 
-  @font-face {
+@font-face {
     font-family: testfont;
     src: url(teen.ttf);
-}
-
-#bar{
-	background-color:steelblue;
-	padding-bottom:3vh;
-}
-#gap{
-	background-color:transparent;
-	padding-bottom:7vh;
-}
-.button{
-	text-align:center;
-	font-size:5vh;
-	margin-top:3vh;
-	padding-top:1vh;
-	padding-bottom:1vh;
-	padding-left:2vw;
-	padding-right:2vw;
-	color:#228;
-	font-family: testfont;
-}
-
-
-@keyframes play{
-	0% { letter-spacing: 0px; }
-	50% {letter-spacing: 3px; }
-	100% { letter-spacing: 0px; }
-	}
-	
-.expand{
-	animation: play 2s infinite;
-}
-
-a{
-	text-decoration: none;
-}
-hr {
-	margin-left: 25vw;
-	margin-right: 25vw;
-	height: 6px;
-	background: url(../img/hr.png) repeat-x 0 0;
-    border: 0;
-	animation:hue 10s infinite;
-}
-.key{
-	animation:hue 5s infinite;
 }

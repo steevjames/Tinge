@@ -10,6 +10,7 @@ body{
 *{
 	transition: all .5s;
 	box-sizing: border-box;
+	user-select: none;
 }
 
 #overlay{
@@ -188,4 +189,5 @@ button{
 	font-family: testfont;
 	text-align: center;
 	display:none;
+	background-image: linear-gradient(to right top, #051937, #201435, #310b2d, #3c021f, #41000c);
 }
