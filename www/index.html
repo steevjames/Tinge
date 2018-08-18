@@ -22,10 +22,15 @@
 		<hr>
 		<a href="about.html" ><div class="button">ABOUT</div></a>
 		<hr>
-		<a href="#" ><div class="button">EXIT</div></a>
+		<a href="#" onclick="navigator.app.exitApp();"><div class="button">EXIT</div></a>
 	</div>
 
-
+	<script type="text/javascript">
+		history.pushState(null, null, location.href);
+			window.onpopstate = function () {
+				navigator.app.exitApp();;
+			};
+		</script>
 </body>
 
 </html>
