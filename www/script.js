@@ -45,7 +45,8 @@ function setUpSquareBox() {
 			scoreDisplay.textContent = score;
 			totalDisplay.textContent = total;
 			if (resultDisplay.textContent <= 0) {
-				window.setTimeout("alert('Over')", 700);
+				document.getElementById('finalscore').textContent= resultDisplay.textContent;
+				document.getElementById('end').style.display='block';
 			}
 		});
 	}
@@ -65,8 +66,6 @@ function resetPage() {
 		else
 			sqrList[i].style.display = "none";
 	}
-	//header.style.backgroundColor = "steelblue";
-	//resultDisplay.textContent = "hi";
 	reset.textContent = "SHUFFLE";
 }
 

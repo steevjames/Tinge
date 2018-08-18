@@ -63,8 +63,8 @@ body{
 	text-align: center;
 	color: black;
 	overflow:hidden;
-	padding-left: 5vw;
-	padding-right: 5vw;
+	padding-left: 2vw;
+	padding-right: 2vw;
 }
 
 
@@ -78,7 +78,7 @@ button{
 	padding-left:20px;
 	padding-right:20px;
 	border: none;
-	background-color: none;
+	background-color: #eee;
 	font-weight: 700;
 	color: steelblue;
 	letter-spacing: 1px;
@@ -170,4 +170,21 @@ button{
 	font-size:10vw;
 	white-space: nowrap;
 	font-family: testfont;
+}
+#end{
+	position:fixed;
+	background-color:rgba(0,0,0,.8);
+	color:white;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%); 
+	padding-top:50vh;
+	padding-bottom:50vh;
+	padding-left:50vw;
+	padding-right:50vw;
+	font-size:10vw;
+	white-space: nowrap;
+	font-family: testfont;
+	text-align: center;
+	display:none;
 }
