@@ -43,6 +43,13 @@
 
 	</div>
 
+	<script type="text/javascript">
+		history.pushState(null, null, location.href);
+		window.onpopstate = function () {
+			window.location.replace('index.html');
+		};
+	</script>
+
 </body>
 
 </html>

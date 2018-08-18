@@ -46,8 +46,18 @@
 	<div class="clickbox" id="clickcorrect">Correct !</div>
 	<div class="clickbox" id="clickwrong">Wrong
 		<br>Try Again !</div>
-	<div id="end">Your Score<br>is<br><span id="finalscore"></span> / 30</div>
+	<div id="end">Your Score
+		<br>is
+		<br>
+		<span id="finalscore"></span> / 30</div>
+		
 	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript">
+		history.pushState(null, null, location.href);
+		window.onpopstate = function () {
+			window.location.replace('index.html');
+		};
+	</script>
 </body>
 
 </html>
