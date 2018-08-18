@@ -15,6 +15,7 @@
    
    <preference name="android-minSdkVersion" value="19" />
    <preference name="android-targetSdkVersion" value="27" />
+   	<preference name="orientation" value="portrait" />
 
    
 	<plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />

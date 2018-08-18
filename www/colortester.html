@@ -3,12 +3,13 @@
 
 <head>
 
-	    <meta charset="utf-8" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />
-	
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+	<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *"
+	/>
+
 
 	<title>COLORFUL</title>
 	<link rel="stylesheet" type="text/css" href="css/colortester.css">
@@ -46,10 +47,10 @@
 			var r = document.getElementById('red').value;
 			var g = document.getElementById('green').value;
 			var b = document.getElementById('blue').value;
-			if (r >= 0 && r <= 255 && g >= 0 && g <= 255 && b >= 0 && b <= 255) {
+			if (r >= 0 && r <= 255 && g >= 0 && g <= 255 && b >= 0 && b <= 255 && r != '' && g != '' && b != '') {
 				var res = "rgb(" + r + ", " + g + ", " + b + ")";
 				document.body.style.backgroundColor = res;
-				document.getElementById('notif').innerHTML = res + " has been applied to the Background";
+				document.getElementById('notif').innerHTML = "<big style='color:#f77;'>" + res + " </big>&nbsp;&nbsp; has been applied to the Background";
 				document.getElementById('notif').style.display = 'block';
 			}
 			else {
@@ -60,9 +61,9 @@
 		}
 	</script>
 
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript">app.initialize();</script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">app.initialize();</script>
 
 
 </body>
