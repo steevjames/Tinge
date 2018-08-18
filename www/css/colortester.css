@@ -57,16 +57,6 @@ body{
 
 
 
-#header{
-	text-align: center;
-	background-color: steelblue;
-	margin: 0px;
-	animation:colorchange 20s infinite;
-	font-family: testfont;
-	padding:10px;
-}
-
-
 .rainbow {
 	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #929), color-stop(0.3, #22f), color-stop(0.45, #299), color-stop(0.6, #2b2),color-stop(0.75, #2b2), color-stop(0.9, #bb2), color-stop(1, #b22) );
 	background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #929), color-stop(0.3, #22f), color-stop(0.45, #299), color-stop(0.6, #2b2),color-stop(0.75, #2b2), color-stop(0.9, #bb2), color-stop(1, #b22) );
@@ -79,4 +69,18 @@ body{
 @font-face {
     font-family: testfont;
     src: url(teen.ttf);
+}
+#text{
+	background-color:rgba(0,0,0,.5);
+	margin-left: auto;
+	margin-right: auto;
+	padding:10px;
+}
+
+#notif{
+	background-color:rgba(0,0,0,.5);
+	margin-left: auto;
+	margin-right: auto;
+	padding:10px;
+	display:none;
 }

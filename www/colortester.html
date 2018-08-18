@@ -13,7 +13,8 @@
 		</div>
 
 		<div id="content">
-			<div>Enter Color :</div>
+			<div id="text">Enter Color :</div>
+			<br>
 			<input placeholder="RED" id="red">
 			<br>
 			<input placeholder="GREEN" id="green">
@@ -21,6 +22,7 @@
 			<input placeholder="BLUE" id="blue">
 			<br>
 			<button onclick="apply()">APPLY</button>
+			<div id="notif">The Color Has Been Applied to the Background.</div>
 		</div>
 
 	</div>
@@ -37,8 +39,16 @@
 			var r = document.getElementById('red').value;
 			var g = document.getElementById('green').value;
 			var b = document.getElementById('blue').value;
-			var res = "rgb(" + r + ", " + g + ", " + b + ")";
-			document.body.style.backgroundColor = res;
+			if (r >= 0 && r <= 255 && g >= 0 && g <= 255 && b >= 0 && b <= 255) {
+				var res = "rgb(" + r + ", " + g + ", " + b + ")";
+				document.body.style.backgroundColor = res;
+				document.getElementById('notif').style.display = 'block';
+			}
+			else {
+				document.getElementById('notif').style.display = 'block';
+				document.getElementById('notif').innerHTML = "Enter Valid Color.<br>All values Should be Between 0 and 255.";
+			}
+
 		}
 	</script>
 
