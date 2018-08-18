@@ -1,5 +1,5 @@
 body{
-	background-color: steelblue;
+	background-color: #5a5;
 	text-transform: uppercase;
 	color: white;
 	padding: 5px;
@@ -37,21 +37,27 @@ body{
 
 #container{
 	max-width: 600px;
-	margin: 20px auto;
+	margin: 30px auto;
+	margin-bottom:0;
+	margin-top:5vh;
+	padding-left: 3vw;
+	padding-right: 3vw;
+	/* background-color:red; */
+	overflow:hidden;
 }
 
 .square{
-	width: 30%;
+	width: 31%;
 	padding-top: 30%;
 	float: left;
-	background-color: pink;
-	margin: 1.66%;
+	background-color: black;
+	margin: 1.1%;
 	transition: background 0.6s;
 }
 
 #header{
 	text-align: center;
-	background-color: steelblue;
+	background-color: #333;
 	margin: 0px;
 	font-weight: normal;
 	line-height: 1.1;
@@ -64,8 +70,6 @@ body{
 	text-align: center;
 	color: black;
 	overflow:hidden;
-	padding-left: 2vw;
-	padding-right: 2vw;
 }
 
 
@@ -73,32 +77,30 @@ body{
 
 }
 
-button{
+.button{
 	padding-bottom:10px;
 	padding-top:10px;
 	padding-left:20px;
 	padding-right:20px;
-	border: none;
-	background-color: #eee;
+	background-color: white;
 	font-weight: 700;
-	color: steelblue;
+	color: black;
 	letter-spacing: 1px;
 	font-size: 2vh;
 	transition: all 0.5s;
 	outline: none;
+	font-family: testfont;
 }
 
 #reset{
 	float:left;
+	width:50%;
 }
 
 #result{
 	float:right;
-}
-
-.hoverbutton:hover{
-	background-color:steelblue;
-	color:white;
+	width:50%;
+	border-left: 5px solid #333;
 }
 
 #score{
