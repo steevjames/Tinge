@@ -11,17 +11,16 @@
 		<div id="topmost">
 			<span class="rainbow">COLORFUL</span>
 		</div>
-		<div id="header"> </div>
 
 		<div id="content">
 			<div>Enter Color :</div>
-			<input placeholder="red">
+			<input placeholder="RED" id="red">
 			<br>
-			<input placeholder="red">
+			<input placeholder="GREEN" id="green">
 			<br>
-			<input placeholder="red">
+			<input placeholder="BLUE" id="blue">
 			<br>
-			<button onclick="">APPLY</button>
+			<button onclick="apply()">APPLY</button>
 		</div>
 
 	</div>
@@ -31,6 +30,16 @@
 		window.onpopstate = function () {
 			window.location.replace('index.html');
 		};
+	</script>
+
+	<script>
+		function apply() {
+			var r = document.getElementById('red').value;
+			var g = document.getElementById('green').value;
+			var b = document.getElementById('blue').value;
+			var res = "rgb(" + r + ", " + g + ", " + b + ")";
+			document.body.style.backgroundColor = res;
+		}
 	</script>
 
 </body>
