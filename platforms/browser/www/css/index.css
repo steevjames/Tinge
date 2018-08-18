@@ -76,7 +76,7 @@ body{
 
 @keyframes play{
 	0% { letter-spacing: 0px; }
-	50% {letter-spacing: 3px; }
+	50% {letter-spacing: 4px; }
 	100% { letter-spacing: 0px; }
 	}
 	

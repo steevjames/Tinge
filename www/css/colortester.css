@@ -99,11 +99,6 @@ body{
 	outline:none;
 	}
 
-button{
-	padding:5px;
-	border:none;
-	outline:none;
-}
 
 .btn {
 	text-decoration: none;
@@ -116,4 +111,5 @@ button{
 	font-size:15px;
 	font-family:verdana;
 	margin-top: 5px;
+	margin-bottom:10px;
 }
