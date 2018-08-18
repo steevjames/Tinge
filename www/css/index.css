@@ -1,5 +1,5 @@
 body{
-	background-color: steelblue;
+	background-color: #299;
 	color: steelblue;
 	padding: 5px;
 	margin:0px;
@@ -12,6 +12,13 @@ body{
 	user-select: none;
 }
 
+@keyframes colorchange{
+	0% { background-color: #33a }
+	33% { background-color: #a33 }
+	66% { background-color: #3a3 }
+	100% { background-color: #33a }
+	}
+
 #overlay{
 	background-color: white;
 	color: white;
@@ -22,10 +29,12 @@ body{
 	bottom:15px;
 	border-radius:25px;
 	overflow:auto;
+	background-image: linear-gradient(to right top, #ffffff, #eeeeee, #dddddd, #cccccc, #bcbcbc);
 }
 
 #topmost{
 	background-color:white;
+	background-image: linear-gradient(to right top, #ffffff, #eeeeee, #dddddd, #cccccc, #bcbcbc);
 	color:#0f3777;
 	text-align: center;
 	font-size:7vh;
@@ -54,8 +63,9 @@ body{
 }
 
 #bar{
-	background-color:steelblue;
+	background-color:#299;
 	padding-bottom:3vh;
+	animation:colorchange 15s infinite;
 }
 #gap{
 	background-color:transparent;
@@ -69,7 +79,7 @@ body{
 	padding-bottom:1vh;
 	padding-left:2vw;
 	padding-right:2vw;
-	color:#228;
+	color:#000;
 	font-family: testfont;
 }
 
