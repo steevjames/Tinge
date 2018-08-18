@@ -45,7 +45,7 @@ function setUpSquareBox() {
 			scoreDisplay.textContent = score;
 			totalDisplay.textContent = total;
 			if (resultDisplay.textContent <= 0) {
-				document.getElementById('finalscore').textContent= resultDisplay.textContent;
+				document.getElementById('finalscore').textContent= score;
 				document.getElementById('end').style.display='block';
 			}
 		});
