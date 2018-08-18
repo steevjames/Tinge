@@ -107,6 +107,7 @@ button{
 	bottom:5px;
 	left:5px;
 	right:5px;
+	font-family:testfont;
 }
 #topbar{
 	background-color:rgba(0,0,0,.3);

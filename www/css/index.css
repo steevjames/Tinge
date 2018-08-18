@@ -30,7 +30,6 @@ body{
 	font-size:7vh;
 	padding:5px;
 	font-family:verdana;
-	position: :sticky;
 }
 
 @keyframes hue{
@@ -91,7 +90,7 @@ hr {
 	margin-left: 25vw;
 	margin-right: 25vw;
 	height: 6px;
-	background: url(hr.png) repeat-x 0 0;
+	background: url(../img/hr.png) repeat-x 0 0;
     border: 0;
 	animation:hue 10s infinite;
 }

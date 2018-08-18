@@ -1,0 +1,117 @@
+body{
+	background-color: steelblue;
+	color: white;
+	padding: 5px;
+	margin:0px;
+	font-family: "Montserrat","Avenir";
+	animation:colorchange 20s infinite;
+}
+
+@keyframes colorchange{
+0% { background-color: #77f }
+33% { background-color: #f77 }
+66% { background-color: #7f7 }
+100% { background-color: #77f }
+}
+
+@keyframes hue{
+	0% { filter:hue-rotate(0deg); }
+	50% { filter:hue-rotate(360deg); }
+	100% { filter:hue-rotate(0deg); }
+	}
+
+*{
+	box-sizing: border-box;
+}
+
+#overlay{
+	background-color: rgba(255,255,255,.9);
+	color: white;
+	position:absolute;
+	left:8px;
+	right:8px;
+	top:8px;
+	bottom:8px;
+	border-radius:10px;
+	overflow:auto;
+	padding-bottom:calc(8px + 8vh);
+}
+
+#topmost{
+	background-color:white;
+	color:#0f3777;
+	text-align: center;
+	font-size:4vh;
+	padding:5px;
+	font-family:verdana;
+	position:sticky;
+	left:0;
+	right:0;
+	top:0;
+}
+
+
+#header{
+	text-align: center;
+	background-color: steelblue;
+	margin: 0px;
+	font-weight: normal;
+	line-height: 1.1;
+	animation:colorchange 20s infinite;
+	font-family: testfont;
+}
+
+
+
+
+#topbar{
+	background-color:rgba(0,0,0,.1);
+	padding-top:1vh;
+	padding-bottom:1vh;
+	text-align:center;
+	line-height: 1;
+	font-size: 25px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+#content{
+	padding-left:1vw;
+	padding-right:1vw;
+	padding-top:3vh;
+	padding-bottom:3vh;
+	text-align: left;
+	line-height: 2;
+	font-family:testfont;
+	font-size:17px;
+	color:black;
+}
+
+hr {
+	margin-left: 10vw;
+	margin-right: 10vw;
+	height: 6px;
+	background: url(hr.png) repeat-x 0 0;
+    border: 0;
+	animation:hue 10s infinite;
+}
+
+
+.block{
+	display:inline-block;
+	padding:15px;
+}
+
+.rainbow {
+	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #929), color-stop(0.3, #22f), color-stop(0.45, #299), color-stop(0.6, #2b2),color-stop(0.75, #2b2), color-stop(0.9, #bb2), color-stop(1, #b22) );
+	background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #929), color-stop(0.3, #22f), color-stop(0.45, #299), color-stop(0.6, #2b2),color-stop(0.75, #2b2), color-stop(0.9, #bb2), color-stop(1, #b22) );
+	color:transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	animation:hue 5s infinite;
+  }
+
+  @font-face {
+    font-family: testfont;
+    src: url(teen.ttf);
+}

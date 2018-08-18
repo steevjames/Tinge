@@ -1,6 +1,6 @@
 body{
 	background-color: steelblue;
-	color: white;
+	color: black;
 	padding: 5px;
 	margin:0px;
 	font-family: "Montserrat","Avenir";
@@ -13,12 +13,6 @@ body{
 66% { background-color: #7f7 }
 100% { background-color: #77f }
 }
-
-@keyframes hue{
-	0% { filter:hue-rotate(0deg); }
-	50% { filter:hue-rotate(360deg); }
-	100% { filter:hue-rotate(0deg); }
-	}
 
 *{
 	box-sizing: border-box;
@@ -44,7 +38,10 @@ body{
 	font-size:4vh;
 	padding:5px;
 	font-family:verdana;
-	position: :sticky;
+	position:sticky;
+	left:0;
+	right:0;
+	top:0;
 }
 
 
@@ -67,10 +64,8 @@ body{
 }
 
 #content{
-	padding-left:1vw;
-	padding-right:1vw;
-	padding-top:3vh;
-	padding-bottom:3vh;
+	padding-left:3vw;
+	padding-right:3vw;
 	text-align: left;
 	line-height: 2;
 	font-family:testfont;
@@ -87,7 +82,7 @@ hr {
 	margin-left: 10vw;
 	margin-right: 10vw;
 	height: 6px;
-	background: url(hr.png) repeat-x 0 0;
+	background: url(../img/hr.png) repeat-x 0 0;
     border: 0;
 	animation:hue 10s infinite;
 }
@@ -110,4 +105,8 @@ hr {
   @font-face {
     font-family: testfont;
     src: url(teen.ttf);
+}
+
+#center{
+	text-align:center;
 }
