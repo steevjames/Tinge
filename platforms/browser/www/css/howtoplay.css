@@ -4,11 +4,14 @@ body{
 	padding: 5px;
 	margin:0px;
 	font-family: "Montserrat","Avenir";
+	animation:colorchange 20s infinite;
 }
 
-*{
-	box-sizing: border-box;
-	user-select: none;
+@keyframes colorchange{
+0% { background-color: #77f }
+33% { background-color: #f77 }
+66% { background-color: #7f7 }
+100% { background-color: #77f }
 }
 
 @keyframes hue{
@@ -17,17 +20,22 @@ body{
 	100% { filter:hue-rotate(0deg); }
 	}
 
+*{
+	box-sizing: border-box;
+	user-select: none;
+}
 
 #overlay{
-	background-color: rgba(255,255,255,0);
+	background-color: rgba(255,255,255,.9);
 	color: white;
 	position:absolute;
-	left:15px;
-	right:15px;
-	top:15px;
-	bottom:15px;
-	border-radius:25px;
+	left:8px;
+	right:8px;
+	top:8px;
+	bottom:8px;
+	border-radius:10px;
 	overflow:auto;
+	padding-bottom:calc(8px + 8vh);
 }
 
 #topmost{
@@ -43,19 +51,57 @@ body{
 	top:0;
 }
 
+
+#header{
+	text-align: center;
+	background-color: steelblue;
+	margin: 0px;
+	font-weight: normal;
+	line-height: 1.1;
+	animation:colorchange 20s infinite;
+	font-family: testfont;
+}
+
+
+
+
+#topbar{
+	background-color:rgba(0,0,0,.1);
+	padding-top:1vh;
+	padding-bottom:1vh;
+	text-align:center;
+	line-height: 1;
+	font-size: 25px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
 #content{
 	padding-left:1vw;
 	padding-right:1vw;
 	padding-top:3vh;
 	padding-bottom:3vh;
-	text-align: center;
+	text-align: left;
 	line-height: 2;
 	font-family:testfont;
 	font-size:17px;
-	color:white;
+	color:black;
+}
+
+hr {
+	margin-left: 10vw;
+	margin-right: 10vw;
+	height: 6px;
+	background: url(hr.png) repeat-x 0 0;
+    border: 0;
+	animation:hue 10s infinite;
 }
 
 
+.block{
+	display:inline-block;
+	padding:15px;
+}
 
 .rainbow {
 	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #929), color-stop(0.3, #22f), color-stop(0.45, #299), color-stop(0.6, #2b2),color-stop(0.75, #2b2), color-stop(0.9, #bb2), color-stop(1, #b22) );
@@ -66,54 +112,7 @@ body{
 	animation:hue 5s infinite;
   }
 
-@font-face {
+  @font-face {
     font-family: testfont;
     src: url(teen.ttf);
-}
-#text{
-	background-color:rgba(0,0,0,.5);
-	margin-left: auto;
-	margin-right: auto;
-	padding:10px;
-}
-
-#notif{
-	background-color:rgba(0,0,0,.5);
-	margin-left: auto;
-	margin-right: auto;
-	padding:10px;
-	display:none;
-}
-
-.val{
-	padding:9px;
-	margin:9px;
-	border-radius:20px;
-	border:none;
-	font-size:20px;
-	min-width:55%;
-	font-family:'gravitas one';
-	background-color:rgba(255,255,255,.7);
-	color:black;
-	text-align:center;
-	outline:none;
-	}
-
-button{
-	padding:5px;
-	border:none;
-	outline:none;
-}
-
-.btn {
-	text-decoration: none;
-	padding:13px;
-	padding-left:50px;
-	padding-right:50px;	
-	background-color:rgba(255,255,255,.6);
-	border:none;
-	color:black;
-	font-size:15px;
-	font-family:verdana;
-	margin-top: 5px;
 }

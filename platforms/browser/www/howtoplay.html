@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>COLORFUL</title>
+	<link rel="stylesheet" type="text/css" href="css/howtoplay.css">
+</head>
+
+<body>
+	<div id="overlay">
+		<div id="topmost">
+			<span class="rainbow">COLORFUL</span>
+		</div>
+		<div id="header">
+			<div id="topbar">
+				HOW TO PLAY
+			</div>
+		</div>
+		<div id="content">
+			<hr>
+			<ul>
+				<li>RGB stands for RED, BLUE, GREEN.</li>
+				<li>RGB(0,0,0) means amount of Red is 0, Green is 0, Blue is 0.</li>
+				<li> This means RGB(0,0,0,) is black
+					<div style="background-color:black;" class="block"> </div> (because there are no colors)</li>
+				<li>Maximum Value for a Particular Color is 255.</li>
+				<li>RGB(255,255,255) is White
+					<div style="background-color:white;" class="block"> </div>
+				</li>
+				<li>RGB(255,0,0) is Red &nbsp;&nbsp;
+					<div style="background-color:red;" class="block"> </div>
+				</li>
+				<li>RGB(0,255,0) is Green
+					<div style="background-color:green;" class="block"> </div>
+				</li>
+				<li>RGB(0,0,255) is Blue &nbsp;
+					<div style="background-color:blue;" class="block"> </div>
+				</li>
+				<li>Any Color can be Obtained by Mixing Red, Green and Blue. This notation is very common so its a must know !</li>
+			</ul>
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+		history.pushState(null, null, location.href);
+		window.onpopstate = function () {
+			window.location.replace('index.html');
+		};
+	</script>
+
+</body>
+
+</html>

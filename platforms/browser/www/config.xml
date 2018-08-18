@@ -6,7 +6,7 @@
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
-    <name>Color Game</name>
+    <name>COLORFUL</name>
     <description>
       Play with Colors !
    </description>
@@ -14,7 +14,7 @@
       Steev James
    </author>
     <preference name="android-minSdkVersion" value="19" />
-    <preference name="android-targetSdkVersion" value="26" />
+    <preference name="android-targetSdkVersion" value="27" />
     <allow-intent href="*" />
     <icon src="img/logo.png" />
     <splash src="img/splash.jpg" />

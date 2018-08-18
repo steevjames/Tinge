@@ -1,15 +1,17 @@
 var colors = [];
-var numSquares = 6;
+var numSquares = 9;
 var sqrList = document.querySelectorAll(".square");
 var pickedColor;
 var colorDisplay = document.querySelector("#curColor");
-var resultDisplay = document.querySelector("#result");
+var resultDisplay = document.querySelector("#rem");
 var header = document.querySelector("#header");
 var reset = document.querySelector("#reset");
 var score = 0;
 var total = 0;
 var scoreDisplay = document.querySelector("#won");
 var totalDisplay = document.querySelector("#total");
+var clickcorrect = document.querySelector("#clickcorrect");
+var clickwrong = document.querySelector("#clickwrong");
 
 init();
 
@@ -22,22 +24,30 @@ function setUpSquareBox() {
 	for (var i = 0; i < sqrList.length; i++) {
 		sqrList[i].addEventListener("click", function () {
 			total++;
+			resultDisplay.textContent = resultDisplay.textContent - 1;
 			if (this.style.backgroundColor != pickedColor) {
-				alert("Wrong choice!");
-				this.style.backgroundColor = "black";
-				resultDisplay.textContent = "Try Again!"
+				//alert("Wrong choice!");
+				clickwrong.style.display = 'block';
+				this.style.backgroundColor = "transparent";
+				this.style.visibility = "hidden";
+				//resultDisplay.textContent = "Try Again!";
 			}
 			else {
 				score++;
-				alert("correct");
-				resultDisplay.textContent = "Correct!"
+				//alert("Correct");
+				//resultDisplay.textContent = "Correct !";
+				clickcorrect.style.display = 'block';
 				reset.textContent = "Play Again?";
 				changeColors(pickedColor);
 				resetPage();
-				
+
 			}
 			scoreDisplay.textContent = score;
 			totalDisplay.textContent = total;
+			if (resultDisplay.textContent <= 0) {
+				document.getElementById('finalscore').textContent= score;
+				document.getElementById('end').style.display='block';
+			}
 		});
 	}
 }
@@ -50,14 +60,13 @@ function resetPage() {
 	for (var i = 0; i < sqrList.length; i++) {
 		if (colors[i]) {
 			sqrList[i].style.display = "block";
+			sqrList[i].style.visibility = "visible";
 			sqrList[i].style.backgroundColor = colors[i];
 		}
 		else
 			sqrList[i].style.display = "none";
 	}
-	//header.style.backgroundColor = "steelblue";
-	resultDisplay.textContent = "";
-	reset.textContent = "Shuffle Colors";
+	reset.textContent = "SHUFFLE";
 }
 
 
@@ -68,10 +77,8 @@ reset.addEventListener("click", function () {
 
 
 function changeColors(color) {
-	for (var i = 0; i < sqrList.length; i++) {
-		sqrList[i].style.backgroundColor = color;
-	}
 	header.style.backgroundColor = color;
+	document.body.style.backgroundColor = color;
 }
 
 function pickColor() {
@@ -90,3 +97,11 @@ function generateRandomColors(num) {
 	}
 	return arr;
 }
+
+clickcorrect.addEventListener("click", function () {
+	clickcorrect.style.display = 'none';
+});
+
+clickwrong.addEventListener("click", function () {
+	clickwrong.style.display = 'none';
+});

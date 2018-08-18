@@ -2,40 +2,56 @@
 <html>
 
 <head>
-	<title>The Color Game</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>COLORFUL</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 
 <body>
-	<div id="header">
-		<div id="topbar">The Great
-			<br>
-			<span id="curColor">RGB</span>
-			<br> Color game</div>
-	</div>
-	<div id="menu">
-		<button id="reset">Shuffle</button>
-		<span id="result"></span>
-	</div>
-	<div id="container">
-		<div class="square"></div>
-		<div class="square"></div>
-		<div class="square"></div>
-		<div class="square"></div>
-		<div class="square"></div>
-		<div class="square"></div>
-		<div id="score">
-			<div id="scorewon">Score &nbsp;&nbsp;:
-				<span id="won">0</span>
-			</div>
-			<div id="scoretotal">
-				Total &nbsp;&nbsp;:
-				<span id="total">0</span>
-			</div>
+	<div id="overlay">
+		<div id="topmost">
+			<span class="rainbow">COLORFUL</span>
 		</div>
+
+		<div id="bar"></div>
+		<div id="gap"></div>
+		<a href="game.html" class="expand">
+			<div class="button">
+				<span class="key">PLAY</span>
+			</div>
+		</a>
+		<hr>
+		<a href="howtoplay.html">
+			<div class="button">
+				<span class="key">HOW TO PLAY</span>
+			</div>
+		</a>
+		<hr>
+		<a href="colortester.html">
+			<div class="button">
+				<span class="key">COLOR TESTER</span>
+			</div>
+		</a>
+		<hr>
+		<a href="about.html">
+			<div class="button">
+				<span class="key">ABOUT</span>
+			</div>
+		</a>
+		<hr>
+		<a href="#" onclick="navigator.app.exitApp();">
+			<div class="button">
+				<span class="key">EXIT</span>
+			</div>
+		</a>
 	</div>
 
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript">
+		history.pushState(null, null, location.href);
+		window.onpopstate = function () {
+			navigator.app.exitApp();
+		};
+	</script>
+
 </body>
 
 </html>

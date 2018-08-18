@@ -1,9 +1,10 @@
 body{
 	background-color: steelblue;
-	color: white;
+	color: steelblue;
 	padding: 5px;
 	margin:0px;
 	font-family: "Montserrat","Avenir";
+	animation:colorchange 15s infinite;
 }
 
 *{
@@ -11,15 +12,8 @@ body{
 	user-select: none;
 }
 
-@keyframes hue{
-	0% { filter:hue-rotate(0deg); }
-	50% { filter:hue-rotate(360deg); }
-	100% { filter:hue-rotate(0deg); }
-	}
-
-
 #overlay{
-	background-color: rgba(255,255,255,0);
+	background-color: white;
 	color: white;
 	position:absolute;
 	left:15px;
@@ -34,28 +28,16 @@ body{
 	background-color:white;
 	color:#0f3777;
 	text-align: center;
-	font-size:4vh;
+	font-size:7vh;
 	padding:5px;
 	font-family:verdana;
-	position:sticky;
-	left:0;
-	right:0;
-	top:0;
 }
 
-#content{
-	padding-left:1vw;
-	padding-right:1vw;
-	padding-top:3vh;
-	padding-bottom:3vh;
-	text-align: center;
-	line-height: 2;
-	font-family:testfont;
-	font-size:17px;
-	color:white;
-}
-
-
+@keyframes hue{
+	0% { filter:hue-rotate(0deg); }
+	50% { filter:hue-rotate(360deg); }
+	100% { filter:hue-rotate(0deg); }
+	}
 
 .rainbow {
 	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #929), color-stop(0.3, #22f), color-stop(0.45, #299), color-stop(0.6, #2b2),color-stop(0.75, #2b2), color-stop(0.9, #bb2), color-stop(1, #b22) );
@@ -66,54 +48,53 @@ body{
 	animation:hue 5s infinite;
   }
 
-@font-face {
+  @font-face {
     font-family: testfont;
     src: url(teen.ttf);
 }
-#text{
-	background-color:rgba(0,0,0,.5);
-	margin-left: auto;
-	margin-right: auto;
-	padding:10px;
-}
 
-#notif{
-	background-color:rgba(0,0,0,.5);
-	margin-left: auto;
-	margin-right: auto;
-	padding:10px;
-	display:none;
+#bar{
+	background-color:steelblue;
+	padding-bottom:3vh;
 }
-
-.val{
-	padding:9px;
-	margin:9px;
-	border-radius:20px;
-	border:none;
-	font-size:20px;
-	min-width:55%;
-	font-family:'gravitas one';
-	background-color:rgba(255,255,255,.7);
-	color:black;
+#gap{
+	background-color:transparent;
+	padding-bottom:7vh;
+}
+.button{
 	text-align:center;
-	outline:none;
-	}
-
-button{
-	padding:5px;
-	border:none;
-	outline:none;
+	font-size:5vh;
+	margin-top:3vh;
+	padding-top:1vh;
+	padding-bottom:1vh;
+	padding-left:2vw;
+	padding-right:2vw;
+	color:#228;
+	font-family: testfont;
 }
 
-.btn {
+
+@keyframes play{
+	0% { letter-spacing: 0px; }
+	50% {letter-spacing: 3px; }
+	100% { letter-spacing: 0px; }
+	}
+	
+.expand{
+	animation: play 2s infinite;
+}
+
+a{
 	text-decoration: none;
-	padding:13px;
-	padding-left:50px;
-	padding-right:50px;	
-	background-color:rgba(255,255,255,.6);
-	border:none;
-	color:black;
-	font-size:15px;
-	font-family:verdana;
-	margin-top: 5px;
+}
+hr {
+	margin-left: 25vw;
+	margin-right: 25vw;
+	height: 6px;
+	background: url(../img/hr.png) repeat-x 0 0;
+    border: 0;
+	animation:hue 10s infinite;
+}
+.key{
+	animation:hue 5s infinite;
 }
