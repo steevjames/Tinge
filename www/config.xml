@@ -1,9 +1,9 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 
 <widget xmlns = "http://www.w3.org/ns/widgets" 
-   xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.steevjames.color" version = "1.1.0">
+   xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.steevjames.colormagic" version = "1.1.1">
    
-   <name>COLORFUL</name>
+   <name>Color Magic</name>
    
    <description>
       Play with Colors !
