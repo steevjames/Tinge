@@ -1,45 +1,128 @@
 body{
-	background-color: #299;
-	color: steelblue;
+	padding: 0;
+	margin:0px;
+	font-family: "Montserrat","Avenir";
+}
+
+#body{
+	background-color: steelblue;
+	text-transform: uppercase;
+	color: white;
 	padding: 5px;
 	margin:0px;
 	font-family: "Montserrat","Avenir";
-	animation:colorchange 15s infinite;
+	overflow: hidden;
+	position: absolute;
+	top:0;
+	left:0;
+	bottom: 0;
+	right:0;
+	/* animation: hue 25s infinite; */
 }
 
 *{
+	transition: all .5s;
 	box-sizing: border-box;
 	user-select: none;
 }
 
-@keyframes colorchange{
-	0% { background-color: #33a }
-	33% { background-color: #a33 }
-	66% { background-color: #3a3 }
-	100% { background-color: #33a }
-	}
-
 #overlay{
-	background-color: white;
+	background-color: rgba(0,0,0,.7);
 	color: white;
 	position:absolute;
 	left:15px;
 	right:15px;
 	top:15px;
 	bottom:15px;
-	border-radius:25px;
+	border-radius:10px;
 	overflow:auto;
-	background-image: linear-gradient(to right top, #ffffff, #eeeeee, #dddddd, #cccccc, #bcbcbc);
+	padding-bottom:calc(5px + 8vh);
 }
 
 #topmost{
 	background-color:white;
-	background-image: linear-gradient(to right top, #ffffff, #eeeeee, #dddddd, #cccccc, #bcbcbc);
 	color:#0f3777;
 	text-align: center;
-	font-size:5vh;
-	padding:5px;
+	font-size:6vh;
+	padding:30px;
+	padding-left:5px;
+	padding-right:5px;
 	font-family:verdana;
+}
+
+#container{
+	max-width: 600px;
+	margin: 30px auto;
+	margin-bottom:0;
+	margin-top:5vh;
+	padding-left: 3vw;
+	padding-right: 3vw;
+	/* background-color:red; */
+	overflow:hidden;
+	text-align: center;
+}
+
+
+#header{
+	text-align: center;
+	background-color: steelblue;
+	margin: 0px;
+}
+
+#topbar{
+	background-color:rgba(0,0,0,.3);
+	padding:1vh;
+	font-family: testfont;
+}
+
+
+#menu{
+	background-color: white;
+	text-align: center;
+	color: black;
+	overflow:hidden;
+}
+
+
+
+.button{
+	padding:5px;
+	background-color: white;
+	font-weight: 700;
+	color: black;
+	letter-spacing: 1px;
+	font-size: 2vh;
+	transition: all 0.5s;
+	outline: none;
+	font-family: testfont;
+}
+
+#reset{
+	float:left;
+	width:50%;
+}
+
+#result{
+	float:right;
+	width:50%;
+	border-left: 5px solid #333;
+}
+
+#score{
+	text-align: center;
+	font-size:20px;
+	position:fixed;
+	bottom:5px;
+	left:5px;
+	right:5px;
+	font-family:testfont;
+}
+
+#scoretotal{
+	background-color:rgba(0,0,0,.2);
+	color:white;
+	font-size:2.5vh;
+	padding:5px;
 }
 
 @keyframes hue{
@@ -61,50 +144,32 @@ body{
     font-family: testfont;
     src: url(teen.ttf);
 }
-
-#bar{
-	background-color:#299;
-	padding-bottom:3vh;
-	animation:colorchange 15s infinite;
-}
-#gap{
-	background-color:transparent;
-	padding-bottom:7vh;
-}
-.button{
+.keys{
+	border:0;
+	padding:10px;
+	background-color:white;
+	color:black;
 	text-align:center;
-	font-size:5vh;
-	margin-top:3vh;
-	padding-top:1vh;
-	padding-bottom:1vh;
-	padding-left:2vw;
-	padding-right:2vw;
-	color:#000;
 	font-family: testfont;
+	font-size:25px;
+	text-align: center;
+	min-width: 90%;
+	margin-top: 20px;
+	color:#800;
+	animation: hue 5s infinite;
+	padding-left: 20px;
+	padding-right: 20px;
 }
-
+.expand{
+	animation: play 2s infinite;
+}
+a{
+	text-decoration: none;
+	color:inherit;
+}
 
 @keyframes play{
 	0% { letter-spacing: 0px; }
 	50% {letter-spacing: 4px; }
 	100% { letter-spacing: 0px; }
 	}
-	
-.expand{
-	animation: play 2s infinite;
-}
-
-a{
-	text-decoration: none;
-}
-hr {
-	margin-left: 25vw;
-	margin-right: 25vw;
-	height: 6px;
-	background: url(../img/hr.png) repeat-x 0 0;
-    border: 0;
-	animation:hue 10s infinite;
-}
-.key{
-	animation:hue 5s infinite;
-}

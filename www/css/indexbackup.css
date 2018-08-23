@@ -1,0 +1,110 @@
+body{
+	background-color: #299;
+	color: steelblue;
+	padding: 5px;
+	margin:0px;
+	font-family: "Montserrat","Avenir";
+	animation:colorchange 15s infinite;
+}
+
+*{
+	box-sizing: border-box;
+	user-select: none;
+}
+
+@keyframes colorchange{
+	0% { background-color: #33a }
+	33% { background-color: #a33 }
+	66% { background-color: #3a3 }
+	100% { background-color: #33a }
+	}
+
+#overlay{
+	background-color: white;
+	color: white;
+	position:absolute;
+	left:15px;
+	right:15px;
+	top:15px;
+	bottom:15px;
+	border-radius:25px;
+	overflow:auto;
+	background-image: linear-gradient(to right top, #ffffff, #eeeeee, #dddddd, #cccccc, #bcbcbc);
+}
+
+#topmost{
+	background-color:white;
+	background-image: linear-gradient(to right top, #ffffff, #eeeeee, #dddddd, #cccccc, #bcbcbc);
+	color:#0f3777;
+	text-align: center;
+	font-size:5vh;
+	padding:5px;
+	font-family:verdana;
+}
+
+@keyframes hue{
+	0% { filter:hue-rotate(0deg); }
+	50% { filter:hue-rotate(360deg); }
+	100% { filter:hue-rotate(0deg); }
+	}
+
+.rainbow {
+	background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #929), color-stop(0.3, #22f), color-stop(0.45, #299), color-stop(0.6, #2b2),color-stop(0.75, #2b2), color-stop(0.9, #bb2), color-stop(1, #b22) );
+	background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #929), color-stop(0.3, #22f), color-stop(0.45, #299), color-stop(0.6, #2b2),color-stop(0.75, #2b2), color-stop(0.9, #bb2), color-stop(1, #b22) );
+	color:transparent;
+	-webkit-background-clip: text;
+	background-clip: text;
+	animation:hue 5s infinite;
+  }
+
+  @font-face {
+    font-family: testfont;
+    src: url(teen.ttf);
+}
+
+#bar{
+	background-color:#299;
+	padding-bottom:3vh;
+	animation:colorchange 15s infinite;
+}
+#gap{
+	background-color:transparent;
+	padding-bottom:7vh;
+}
+.button{
+	text-align:center;
+	font-size:5vh;
+	margin-top:3vh;
+	padding-top:1vh;
+	padding-bottom:1vh;
+	padding-left:2vw;
+	padding-right:2vw;
+	color:#000;
+	font-family: testfont;
+}
+
+
+@keyframes play{
+	0% { letter-spacing: 0px; }
+	50% {letter-spacing: 4px; }
+	100% { letter-spacing: 0px; }
+	}
+	
+.expand{
+	animation: play 2s infinite;
+}
+
+a{
+	text-decoration: none;
+}
+hr {
+	margin-left: 25vw;
+	margin-right: 25vw;
+	height: 6px;
+	background: url(../img/hr.png) repeat-x 0 0;
+    border: 0;
+	animation:hue 10s infinite;
+}
+.key{
+	animation:hue 5s infinite;
+}
