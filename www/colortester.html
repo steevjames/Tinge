@@ -16,6 +16,7 @@
 </head>
 
 <body>
+		<EMBED SRC="sounds/drop.mp3" autostart="true">
 	<div id="overlay">
 		<div id="topmost">
 			<span class="rainbow">TINGE</span>
@@ -55,7 +56,7 @@
 			}
 			else {
 				document.getElementById('notif').style.display = 'block';
-				document.getElementById('notif').innerHTML = "Enter Valid Color.<br>All values Should be Between 0 and 255.";
+				document.getElementById('notif').innerHTML = "<div class='alert'>Enter Valid Color.<br>All values Should be Between 0 and 255.</div>";
 			}
 
 		}

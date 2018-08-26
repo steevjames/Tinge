@@ -116,3 +116,7 @@ hr {
     font-family: testfont;
     src: url(teen.ttf);
 }
+embed{
+	visibility: hidden;
+	position:fixed;
+}

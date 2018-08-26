@@ -173,3 +173,7 @@ a{
 	50% {letter-spacing: 4px; }
 	100% { letter-spacing: 0px; }
 	}
+embed{
+	visibility: hidden;
+	position:fixed;
+}

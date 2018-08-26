@@ -113,3 +113,18 @@ body{
 	margin-top: 5px;
 	margin-bottom:10px;
 }
+embed{
+	visibility: hidden;
+	position:fixed;
+}
+
+@keyframes size{
+	0% {  color:inherit; }
+	50% { color:#f99; }
+	100% {  color:inherit; }
+	}
+
+.alert{
+	color:#f88;
+	animation:size 1s infinite;
+}
