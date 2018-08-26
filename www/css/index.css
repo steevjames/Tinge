@@ -137,7 +137,7 @@ body{
 	color:transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
-	animation:hue 5s infinite;
+	animation:hue 1.5s infinite;
   }
 
   @font-face {

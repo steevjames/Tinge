@@ -30,6 +30,8 @@ function setUpSquareBox() {
 				clickwrong.style.display = 'block';
 				this.style.backgroundColor = "transparent";
 				this.style.visibility = "hidden";
+				var audio = new Audio('sounds/wrong.mp3');
+				audio.play();
 				//resultDisplay.textContent = "Try Again!";
 			}
 			else {
@@ -39,6 +41,8 @@ function setUpSquareBox() {
 				clickcorrect.style.display = 'block';
 				reset.textContent = "Play Again?";
 				changeColors(pickedColor);
+				var audio = new Audio('sounds/correct.mp3');
+				audio.play();
 				resetPage();
 
 			}

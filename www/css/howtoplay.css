@@ -42,7 +42,7 @@ body{
 	background-color:white;
 	color:#0f3777;
 	text-align: center;
-	font-size:4vh;
+	font-size:5vh;
 	padding:5px;
 	font-family:verdana;
 	position:sticky;
@@ -109,7 +109,7 @@ hr {
 	color:transparent;
 	-webkit-background-clip: text;
 	background-clip: text;
-	animation:hue 5s infinite;
+	animation:hue 1.5s infinite;
   }
 
   @font-face {

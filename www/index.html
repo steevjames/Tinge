@@ -12,25 +12,39 @@
 
 	<title>TINGE</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	<script type="text/javascript">
+		history.pushState(null, null, location.href);
+		window.onpopstate = function () {
+			navigator.app.exitApp();;
+		};
+	</script>
+	<script>
+		setTimeout(function () {
+			var audio = new Audio('sounds/intro.mp3');
+			audio.play();
+		}, 300);
+	</script>
+
 </head>
 
 <body>
 	<div id="body">
-	<div id="overlay">
-		<div id="topmost">
-			<span class="rainbow">TINGE</span>
-		</div>
-		<div id="header">
-			<div id="topbar"> </div>
-		</div>
+		<div id="overlay">
+			<div id="topmost">
+				<span class="rainbow">TINGE</span>
+			</div>
+			<div id="header">
+				<div id="topbar"> </div>
+			</div>
 
-		<div id="container">
-			<a href="game.html"><button class="keys"><div class="expand">PLAY</div></button></a>
-			<a href="howtoplay.html"><button class="keys">HOW TO PLAY</button></a>
-			<a href="colortester.html"><button class="keys">COLOR TESTER</button></a>
-			<a href="about.html"><button class="keys">ABOUT</button></a>
-			<a href="#"><button class="keys">EXIT</button></a>
-		</div>
+			<div id="container">
+				<a href="game.html"><button class="keys"><div class="expand">PLAY</div></button></a>
+				<a href="howtoplay.html"><button class="keys">HOW TO PLAY</button></a>
+				<a href="colortester.html"><button class="keys">COLOR TESTER</button></a>
+				<a href="about.html"><button class="keys">ABOUT</button></a>
+				<a href="#"><button class="keys" onclick="navigator.app.exitApp();">EXIT</button></a>
+			</div>
 		</div>
 
 		<script type="text/javascript" src="cordova.js"></script>
