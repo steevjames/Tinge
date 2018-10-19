@@ -1,12 +1,12 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 
 <widget xmlns = "http://www.w3.org/ns/widgets" 
-   xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.steevjames.tinge" version = "1.2.8">
+   xmlns:gap = "http://phonegap.com/ns/1.0" id = "com.steevjames.tinge" version = "1.3.2">
    
    <name>TINGE</name>
    
    <description>
-      Play with Colors !
+      Choose the color shown in RGB form from a group of colors displayed.
    </description>
    
    <author href = "http://steevjames.blogspot.com" email = "steevjames@gmail.com">
@@ -14,7 +14,7 @@
    </author>
    
    <preference name="android-minSdkVersion" value="19" />
-   <preference name="android-targetSdkVersion" value="27" />
+   <preference name="android-targetSdkVersion" value="28" />
    	<preference name="orientation" value="portrait" />
 
    
