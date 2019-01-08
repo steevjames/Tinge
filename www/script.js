@@ -1,4 +1,3 @@
-var colors = [];
 var numSquares = 9;
 var sqrList = document.querySelectorAll(".square");
 var pickedColor;
@@ -32,12 +31,10 @@ function setUpSquareBox() {
 				this.style.visibility = "hidden";
 				var audio = new Audio('sounds/wrong.mp3');
 				audio.play();
-				//resultDisplay.textContent = "Try Again!";
 			}
 			else {
 				score++;
 				//alert("Correct");
-				//resultDisplay.textContent = "Correct !";
 				clickcorrect.style.display = 'block';
 				reset.textContent = "Play Again?";
 				changeColors(pickedColor);
@@ -58,18 +55,28 @@ function setUpSquareBox() {
 
 
 function resetPage() {
-	colors = generateRandomColors(numSquares);
-	pickedColor = pickColor();
-	colorDisplay.textContent = pickedColor;
-	for (var i = 0; i < sqrList.length; i++) {
-		if (colors[i]) {
-			sqrList[i].style.display = "block";
-			sqrList[i].style.visibility = "visible";
-			sqrList[i].style.backgroundColor = colors[i];
-		}
-		else
-			sqrList[i].style.display = "none";
+	var num = numSquares;
+
+	var r1 = Math.floor(Math.random() * 256);
+	var g1 = Math.floor(Math.random() * 256);
+	var b1 = Math.floor(Math.random() * 256);
+	pickedColor = "rgb(" + r1 + ", " + g1 + ", " + b1 + ")";
+
+
+	for (var i = 0; i < num; i++) {
+		var r=-100,g=-100,b=-100;
+		var difference=20;
+		while(r==-100 || (r<r1+difference && r>r1-difference) ) r = Math.floor(Math.random() * 256);
+		while(g==-100 || (g<g1+difference && g>g1-difference) ) g = Math.floor(Math.random() * 256);
+		while(b==-100 || (b<b1+difference && b>b1-difference) ) b = Math.floor(Math.random() * 256);
+		var res = "rgb(" + r + ", " + g + ", " + b + ")";
+		sqrList[i].style.display = "block";
+		sqrList[i].style.visibility = "visible";
+		sqrList[i].style.backgroundColor = res;
 	}
+	var rand = Math.floor(Math.random() * sqrList.length);
+	sqrList[rand].style.backgroundColor = pickedColor;
+	colorDisplay.textContent = pickedColor;
 	reset.textContent = "SHUFFLE";
 }
 
@@ -85,22 +92,7 @@ function changeColors(color) {
 	document.body.style.backgroundColor = color;
 }
 
-function pickColor() {
-	var rand = Math.floor(Math.random() * colors.length);
-	return colors[rand];
-}
 
-function generateRandomColors(num) {
-	var arr = [];
-	for (var i = 0; i < num; i++) {
-		var r = Math.floor(Math.random() * 256);
-		var g = Math.floor(Math.random() * 256);
-		var b = Math.floor(Math.random() * 256);
-		var res = "rgb(" + r + ", " + g + ", " + b + ")";
-		arr.push(res);
-	}
-	return arr;
-}
 
 clickcorrect.addEventListener("click", function () {
 	clickcorrect.style.display = 'none';
