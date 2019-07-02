@@ -76,9 +76,9 @@ body{
 #content{
 	padding-left:3vw;
 	padding-right:3vw;
-	text-align: left;
-	line-height: 2;
-	font-family:testfont;
+	text-align: center;
+	line-height: 1.5;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	font-size:17px;
 	color:black;
 }
@@ -119,4 +119,25 @@ hr {
 embed{
 	visibility: hidden;
 	position:fixed;
+}
+
+.donateimg{
+	width:50%;
+	max-width: 300px;
+}
+
+.enddiv {
+	padding: 10px;
+	padding-top: 0;
+}
+.options{
+	border:0;
+	border-radius:5px;
+	padding:15px 5px;
+	background-color:steelblue;
+	color:white;
+	margin: 0;
+	margin-top: 15px;
+	width:47%;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
